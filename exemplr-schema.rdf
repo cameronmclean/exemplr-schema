@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:ns0="http://vivoweb.org/ontology/core#">
+
+  <owl:Ontology rdf:about="http://purl.org/NET/exemplr#">
+    <dc:title xml:lang="en">Schema to describe Design Pattern Exemplifcations</dc:title>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Design Pattern Exemplar Schema</rdfs:label>
+    <rdfs:comment xml:lang="en">A simple scheam for describing annotations that capture design pattern examples.</rdfs:comment>
+    <foaf:maker>
+      <foaf:Person rdf:about="http://purl.org/NET/exemplr#cam">
+        <ns0:orcidId rdf:resource="http://orcid.org/0000-0002-9836-3824"/>
+        <foaf:name>Cameron McLean</foaf:name>
+        <foaf:homepage rdf:resource="http://cameronmclean.github.io"/>
+      </foaf:Person>
+    </foaf:maker>
+
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-19</dc:created>
+    <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0#id"/>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://purl.org/NET/exemplr#Exemplar">
+    <rdfs:label xml:lang="en">Exemplar</rdfs:label>
+    <rdfs:comment xml:lang="en">A an Exemplar is a graph structure that ties together a design pattern with an instance of its application, exemplifying how the forces are dealt with in a concrete design.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/exemplr#concernsForce">
+    <rdfs:label xml:lang="en">concerns Force</rdfs:label>
+    <rdfs:comment xml:lang="en">Names the pattern force(s) the specific exemplar highlights examples of.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/NET/exemplr#Exemplar"/>
+    <rdfs:range rdf:resource="http://purl.org/NET/labpatterns#Force"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/exemplr#concernsPattern">
+    <rdfs:label xml:lang="en">concerns Pattern</rdfs:label>
+    <rdfs:comment xml:lang="en">Names the pattern which the specific exemplar concerns.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/NET/exemplr#Exemplar"/>
+    <rdfs:range rdf:resource="http://purl.org/NET/labpatterns#Pattern"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/exemplr#hasTarget">
+    <rdfs:label xml:lang="en">has target</rdfs:label>
+    <rdfs:comment xml:lang="en">The protocol resource (instance) the exemplar points to.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/NET/exemplr#Exemplar"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/NET/exemplr#hasData">
+    <rdfs:label xml:lang="en">has data</rdfs:label>
+    <rdfs:comment xml:lang="en">The specific text fragment from the protocol that constitutes the exemplar.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://purl.org/NET/exemplr#exemplifiedBy">
+    <rdfs:label xml:lang="en">exemplified by</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a pattern force to a literal string describing an instance of how the force was dealt with.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:DatatypeProperty>
+
+</rdf:RDF>
