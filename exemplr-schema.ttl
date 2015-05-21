@@ -81,7 +81,7 @@
 ###################################
 
 :hasData rdf:type owl:DatatypeProperty ;
-	rdfs:label "has data"@en ;t
+	rdfs:label "has data"@en ;
 	rdfs:comment "The specific text fragment from the protocol that constitutes the exemplar."@en ;
 	rdfs:isDefinedBy : .
 
