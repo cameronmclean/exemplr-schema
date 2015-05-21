@@ -69,6 +69,7 @@
 	rdfs:range lp:Pattern ;
 	rdfs:isDefinedBy : .
 
+
 :hasTarget rdf:type owl:ObjectProperty ;
 	rdfs:label "has target"@en ;
 	rdfs:comment "The protocol resource (instance) the exemplar points to."@en ;
@@ -76,16 +77,19 @@
 	rdfs:isDefinedBy : .
 
 
+:creatorORCID rdf:type owl:DataTypeProperty ;
+	rdfs:label "creator ORCID"@en ;
+	rdfs:comment "ORCID resource that identifies the person who created the exemplar/annotation."@en ;
+	rdfs:isDefinedBy : .
+
+
 ###################################
 #  Datatype Properties
 ###################################
 
-:creatorORCID rdf:type owl:DataTypeProperty ;
-	rdfs:label "creator ORCID"@en ;
-	rdfs:comment "ORCID to identify the person who created the exemplar/annotation."@en ;
-	rdfs:isDefinedBy : .
 
-:hasData rdf:type owl:DatatypeProperty ;
+
+:hasDetail rdf:type owl:DatatypeProperty ;
 	rdfs:label "has data"@en ;
 	rdfs:comment "The specific text fragment from the protocol that constitutes the exemplar."@en ;
 	rdfs:isDefinedBy : .
