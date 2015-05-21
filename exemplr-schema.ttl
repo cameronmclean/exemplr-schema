@@ -80,6 +80,11 @@
 #  Datatype Properties
 ###################################
 
+:creatorORCID rdf:type owl:DataTypeProperty ;
+	rdfs:label "creator ORCID"@en ;
+	rdfs:comment "ORCID to identify the person who created the exemplar/annotation."@en ;
+	rdfs:isDefinedBy : .
+
 :hasData rdf:type owl:DatatypeProperty ;
 	rdfs:label "has data"@en ;
 	rdfs:comment "The specific text fragment from the protocol that constitutes the exemplar."@en ;

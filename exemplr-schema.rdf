@@ -51,6 +51,12 @@
     <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
   </owl:ObjectProperty>
 
+  <owl:DataTypeProperty rdf:about="http://purl.org/NET/exemplr#creatorORCID">
+    <rdfs:label xml:lang="en">creator ORCID</rdfs:label>
+    <rdfs:comment xml:lang="en">ORCID to identify the person who created the exemplar/annotation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/NET/exemplr#"/>
+  </owl:DataTypeProperty>
+
   <owl:DatatypeProperty rdf:about="http://purl.org/NET/exemplr#hasData">
     <rdfs:label xml:lang="en">has data</rdfs:label>
     <rdfs:comment xml:lang="en">The specific text fragment from the protocol that constitutes the exemplar.</rdfs:comment>
