@@ -13,7 +13,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
 
 
 
@@ -25,7 +25,7 @@
 	rdf:type owl:Ontology ;
 	dcterms:title "Schema to describe Design Pattern Exemplifcations"@en ;
 	rdfs:label "Design Pattern Exemplar Schema"^^xsd:string ;
-	rdfs:comment "A simple scheam for describing annotations that capture design pattern examples."@en ;
+	rdfs:comment "A simple schema for describing annotations that capture design pattern examples."@en ;
 	foaf:maker :cam ;
 	dcterms:created "2015-05-19"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/4.0#id> .
@@ -70,7 +70,7 @@
 	rdfs:isDefinedBy : .
 
 
-:hasTarget rdf:type owl:ObjectProperty ;
+:hasTargetURL rdf:type owl:ObjectProperty ;
 	rdfs:label "has target"@en ;
 	rdfs:comment "The protocol resource (instance) the exemplar points to."@en ;
 	rdfs:domain :Exemplar ;
@@ -89,13 +89,30 @@
 
 
 
-:hasDetail rdf:type owl:DatatypeProperty ;
-	rdfs:label "has data"@en ;
+:hasTargetDetail rdf:type owl:DatatypeProperty ;
+	rdfs:label "has detail"@en ;
 	rdfs:comment "The specific text fragment from the protocol that constitutes the exemplar."@en ;
+	rdfs:domain :Exemplar ;
+	rdfs:range xsd:string ;
 	rdfs:isDefinedBy : .
 
+:hasTargetTitle rdf:type owl:DatatypeProperty ;
+	rdfs:label "has title"@en ;
+	rdfs:comment "The title of the protocol web resource that the exemplar refers to."@en ;
+	rdfs:domain :Exemplar ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy : .
 
 :exemplifiedBy rdf:type owl:DatatypeProperty ;
 	rdfs:label "exemplified by"@en ;
 	rdfs:comment "Relates a pattern force to a literal string describing an instance of how the force was dealt with."@en ;
+	rdfs:domain lp:Force ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy : .
+
+:hasComment rdf:type owl:DatatypeProperty ;
+	rdfs:label "has comment"@en ;
+	rdfs:comment "Describes additional details relevant to how the target exemplifies the pattern and forces"@en ;
+	rdfs:domain :Exemplar ;
+	rdfs:range xsd:string ;
 	rdfs:isDefinedBy : .
